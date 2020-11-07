@@ -2,6 +2,8 @@
 
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+	<!-- <xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" /> -->
+  
   <link name="robot_footprint"></link>
 
   <joint name="robot_footprint_joint" type="fixed">
@@ -92,14 +94,14 @@
     <child link="camera" />
   </joint>
 
-
- <link name="camera_optical"></link>
-
   <joint name="camera_optical_joint" type="fixed">
     <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
     <parent link="camera"/>
-    <child link="camera_optical"/>
+    <child link="camera_link_optical"/>
   </joint>
+
+  <link name="camera_link_optical"></link>
+
 
   <link name='left_wheel'>
 
