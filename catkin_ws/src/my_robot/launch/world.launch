@@ -37,4 +37,7 @@
 <!--launch rviz-->
 <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/config/amcl.rviz"/>
 
+<!-- launch teleop-->
+<include file="$(find my_robot)/launch/teleop.launch"/>
+
 </launch>
